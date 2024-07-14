@@ -8,6 +8,7 @@ fi
 
 export TOOLCHAIN=$NDK/toolchains/llvm/prebuilt/$HOST_TAG
 
+export ANDROID_NDK_ROOT=$NDK
 export ANDROID_NDK_HOME=$NDK
 PATH=$TOOLCHAIN/bin:$PATH
 
