@@ -1,5 +1,5 @@
 # Replace with your Talsec repo location
-TALSEC_CPP=/Users/oprikryl/ahead/Talsec_Android_Security_Library/talsec_security/src/main/cpp
+TALSEC_CPP=/Users/martinzigrai/Documents/Talsec_Android_Security_Library/talsec_security/src/main/cpp
 
 ARCHS=("arm64-v8a" "armeabi-v7a" "x86" "x86_64")
 
@@ -31,6 +31,8 @@ if [ -d "build" ]; then
 		mkdir -p $OPENSSL_INCLUDE_PATH
 		cp -r openssl/$ARCH/lib/libcrypto.a $OPENSSL_LIB_PATH
 		cp -r openssl/$ARCH/lib/libssl.a $OPENSSL_LIB_PATH
+		cp -r openssl/$ARCH/lib/libcrypto.so $OPENSSL_LIB_PATH
+		cp -r openssl/$ARCH/lib/libssl.so $OPENSSL_LIB_PATH
 		cp -r openssl/$ARCH/include/openssl/* $OPENSSL_INCLUDE_PATH
 	
 		# copy new curl
@@ -39,6 +41,7 @@ if [ -d "build" ]; then
 		mkdir -p $CURL_LIB_PATH
 		mkdir -p $CURL_INCLUDE_PATH
 		cp -r curl/$ARCH/lib/libcurl.a $CURL_LIB_PATH
+		cp -r curl/$ARCH/lib/libcurl.la $CURL_LIB_PATH
 		cp -r curl/$ARCH/include/curl/* $CURL_INCLUDE_PATH
 	done
 

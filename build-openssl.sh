@@ -26,7 +26,7 @@ export LD=$TOOLCHAIN/bin/ld
 export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
-./Configure android-arm64 no-shared \
+./Configure -fpic android-arm64 no-shared \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
  --prefix=$PWD/build/$ANDROID_ARCH
 
@@ -47,7 +47,7 @@ export LD=$TOOLCHAIN/bin/ld
 export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
-./Configure android-arm no-shared \
+./Configure -fpic android-arm no-shared \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
  --prefix=$PWD/build/$ANDROID_ARCH
 
@@ -68,7 +68,7 @@ export LD=$TOOLCHAIN/bin/ld
 export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
-./Configure android-x86 no-shared \
+./Configure -fpic android-x86 no-shared \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
  --prefix=$PWD/build/$ANDROID_ARCH
 
@@ -89,7 +89,7 @@ export LD=$TOOLCHAIN/bin/ld
 export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
-./Configure android-x86_64 no-shared \
+./Configure -fpic android-x86_64 no-shared \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
  --prefix=$PWD/build/$ANDROID_ARCH
 
