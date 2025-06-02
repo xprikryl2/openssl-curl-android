@@ -1,10 +1,10 @@
 #!/bin/bash
 
-export NDK=$HOME/Library/Android/sdk/ndk/26.1.10909125
+export NDK=$HOME/Library/Android/sdk/ndk/27.2.12479018
 export HOST_TAG=darwin-x86_64
 export MIN_SDK_VERSION=23
 
 export CFLAGS="-Os"
-export LDFLAGS="-Wl,-Bsymbolic"
+export LDFLAGS="-Wl,-Bsymbolic,-z,max-page-size=16384"
 
 ./build.sh
