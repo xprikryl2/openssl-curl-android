@@ -27,6 +27,9 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-arm64 no-shared \
+ no-tests no-apps no-ec2m no-weak-ssl-ciphers no-ocsp no-dtls no-dtls1 no-dtls1_2 no-ssl3 no-ssl2 no-comp no-engine no-async \
+ -fvisibility=hidden \
+ -Os \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
  --prefix=$PWD/build/$ANDROID_ARCH
 
@@ -34,6 +37,12 @@ make -j$CORES
 make install_sw
 make clean
 mkdir -p ../build/openssl/$ANDROID_ARCH
+
+rm -rf $PWD/build/$ANDROID_ARCH/bin
+rm -rf $PWD/build/$ANDROID_ARCH/lib/cmake
+rm -rf $PWD/build/$ANDROID_ARCH/lib/engines-3
+rm -rf $PWD/build/$ANDROID_ARCH/lib/ossl-modules
+rm -rf $PWD/build/$ANDROID_ARCH/lib/pkgconfig
 cp -R $PWD/build/$ANDROID_ARCH ../build/openssl/
 
 # arm
@@ -48,6 +57,9 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-arm no-shared \
+ no-tests no-apps no-ec2m no-weak-ssl-ciphers no-ocsp no-dtls no-dtls1 no-dtls1_2 no-ssl3 no-ssl2 no-comp no-engine no-async \
+ -fvisibility=hidden \
+ -Os \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
  --prefix=$PWD/build/$ANDROID_ARCH
 
@@ -55,6 +67,12 @@ make -j$CORES
 make install_sw
 make clean
 mkdir -p ../build/openssl/$ANDROID_ARCH
+
+rm -rf $PWD/build/$ANDROID_ARCH/bin
+rm -rf $PWD/build/$ANDROID_ARCH/lib/cmake
+rm -rf $PWD/build/$ANDROID_ARCH/lib/engines-3
+rm -rf $PWD/build/$ANDROID_ARCH/lib/ossl-modules
+rm -rf $PWD/build/$ANDROID_ARCH/lib/pkgconfig
 cp -R $PWD/build/$ANDROID_ARCH ../build/openssl/
 
 # x86
@@ -69,6 +87,9 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-x86 no-shared \
+ no-tests no-apps no-ec2m no-weak-ssl-ciphers no-ocsp no-dtls no-dtls1 no-dtls1_2 no-ssl3 no-ssl2 no-comp no-engine no-async \
+ -fvisibility=hidden \
+ -Os \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
  --prefix=$PWD/build/$ANDROID_ARCH
 
@@ -76,6 +97,12 @@ make -j$CORES
 make install_sw
 make clean
 mkdir -p ../build/openssl/$ANDROID_ARCH
+
+rm -rf $PWD/build/$ANDROID_ARCH/bin
+rm -rf $PWD/build/$ANDROID_ARCH/lib/cmake
+rm -rf $PWD/build/$ANDROID_ARCH/lib/engines-3
+rm -rf $PWD/build/$ANDROID_ARCH/lib/ossl-modules
+rm -rf $PWD/build/$ANDROID_ARCH/lib/pkgconfig
 cp -R $PWD/build/$ANDROID_ARCH ../build/openssl/
 
 # x64
@@ -90,6 +117,9 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-x86_64 no-shared \
+ no-tests no-apps no-ec2m no-weak-ssl-ciphers no-ocsp no-dtls no-dtls1 no-dtls1_2 no-ssl3 no-ssl2 no-comp no-engine no-async \
+ -fvisibility=hidden \
+ -Os \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
  --prefix=$PWD/build/$ANDROID_ARCH
 
@@ -97,6 +127,12 @@ make -j$CORES
 make install_sw
 make clean
 mkdir -p ../build/openssl/$ANDROID_ARCH
+
+rm -rf $PWD/build/$ANDROID_ARCH/bin
+rm -rf $PWD/build/$ANDROID_ARCH/lib/cmake
+rm -rf $PWD/build/$ANDROID_ARCH/lib/engines-3
+rm -rf $PWD/build/$ANDROID_ARCH/lib/ossl-modules
+rm -rf $PWD/build/$ANDROID_ARCH/lib/pkgconfig
 cp -R $PWD/build/$ANDROID_ARCH ../build/openssl/
 
 cd ..

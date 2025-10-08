@@ -12,7 +12,13 @@ export TOOLCHAIN=$NDK/toolchains/llvm/prebuilt/$HOST_TAG
 # disable functionalities here to reduce size
 ARGUMENTS=" \
     --with-pic \
-    --disable-shared
+    --disable-shared \
+    --without-libpsl \
+    --disable-debug \
+    --disable-manual \
+    --disable-verbose \
+    --disable-ntlm-wb \
+    --disable-cli
     "
 
 mkdir -p build/curl
@@ -40,6 +46,11 @@ make -j$CORES
 make install
 make clean
 mkdir -p ../build/curl/$ANDROID_ARCH
+
+rm -rf $PWD/build/$ANDROID_ARCH/bin
+rm -rf $PWD/build/$ANDROID_ARCH/lib/pkgconfig
+rm -f $PWD/build/$ANDROID_ARCH/lib/libcurl.la
+rm -rf $PWD/build/$ANDROID_ARCH/share
 cp -R $PWD/build/$ANDROID_ARCH ../build/curl/
 
 # arm
@@ -63,6 +74,11 @@ make -j$CORES
 make install
 make clean
 mkdir -p ../build/curl/$ANDROID_ARCH
+
+rm -rf $PWD/build/$ANDROID_ARCH/bin
+rm -rf $PWD/build/$ANDROID_ARCH/lib/pkgconfig
+rm -f $PWD/build/$ANDROID_ARCH/lib/libcurl.la
+rm -rf $PWD/build/$ANDROID_ARCH/share
 cp -R $PWD/build/$ANDROID_ARCH ../build/curl/
 
 # x86
@@ -86,6 +102,11 @@ make -j$CORES
 make install
 make clean
 mkdir -p ../build/curl/$ANDROID_ARCH
+
+rm -rf $PWD/build/$ANDROID_ARCH/bin
+rm -rf $PWD/build/$ANDROID_ARCH/lib/pkgconfig
+rm -f $PWD/build/$ANDROID_ARCH/lib/libcurl.la
+rm -rf $PWD/build/$ANDROID_ARCH/share
 cp -R $PWD/build/$ANDROID_ARCH ../build/curl/
 
 # x64
@@ -109,6 +130,11 @@ make -j$CORES
 make install
 make clean
 mkdir -p ../build/curl/$ANDROID_ARCH
+
+rm -rf $PWD/build/$ANDROID_ARCH/bin
+rm -rf $PWD/build/$ANDROID_ARCH/lib/pkgconfig
+rm -f $PWD/build/$ANDROID_ARCH/lib/libcurl.la
+rm -rf $PWD/build/$ANDROID_ARCH/share
 cp -R $PWD/build/$ANDROID_ARCH ../build/curl/
 
 cd ..
