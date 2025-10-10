@@ -27,7 +27,7 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-arm64 no-shared \
- enable-ec_nistp_64_gcc_128 no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-deprecated no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
+ enable-ec_nistp_64_gcc_128 no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
  no-md4 no-mdc2 no-ml-dsa no-ml-kem no-multiblock no-nextprotoneg no-ocb no-ocsp no-quic no-rc2 no-rc4 no-rmd160 no-scrypt no-seed no-siphash no-siv no-sm2 no-sm3 no-sm4 no-srp no-srtp no-ts no-whirlpool \
  -fvisibility=hidden \
  -Os \
@@ -58,7 +58,7 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-arm no-shared \
- no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-deprecated no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
+ no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
  no-md4 no-mdc2 no-ml-dsa no-ml-kem no-multiblock no-nextprotoneg no-ocb no-ocsp no-quic no-rc2 no-rc4 no-rmd160 no-scrypt no-seed no-siphash no-siv no-sm2 no-sm3 no-sm4 no-srp no-srtp no-ts no-whirlpool \
  -fvisibility=hidden \
  -Os \
@@ -89,7 +89,7 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-x86 no-shared \
- no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-deprecated no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
+ no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
  no-md4 no-mdc2 no-ml-dsa no-ml-kem no-multiblock no-nextprotoneg no-ocb no-ocsp no-quic no-rc2 no-rc4 no-rmd160 no-scrypt no-seed no-siphash no-siv no-sm2 no-sm3 no-sm4 no-srp no-srtp no-ts no-whirlpool \
  -fvisibility=hidden \
  -Os \
@@ -120,7 +120,7 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-x86_64 no-shared \
- enable-ec_nistp_64_gcc_128 no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-deprecated no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
+ enable-ec_nistp_64_gcc_128 no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
  no-md4 no-mdc2 no-ml-dsa no-ml-kem no-multiblock no-nextprotoneg no-ocb no-ocsp no-quic no-rc2 no-rc4 no-rmd160 no-scrypt no-seed no-siphash no-siv no-sm2 no-sm3 no-sm4 no-srp no-srtp no-ts no-whirlpool \
  -fvisibility=hidden \
  -Os \
