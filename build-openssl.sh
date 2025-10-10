@@ -27,7 +27,8 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-arm64 no-shared \
- no-tests no-apps no-ec2m no-weak-ssl-ciphers no-ocsp no-dtls no-dtls1 no-dtls1_2 no-ssl3 no-ssl2 no-comp no-engine no-async \
+ enable-ec_nistp_64_gcc_128 no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-deprecated no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
+ no-md4 no-mdc2 no-ml-dsa no-ml-kem no-multiblock no-nextprotoneg no-ocb no-ocsp no-quic no-rc2 no-rc4 no-rmd160 no-scrypt no-seed no-siphash no-siv no-sm2 no-sm3 no-sm4 no-srp no-srtp no-ts no-whirlpool \
  -fvisibility=hidden \
  -Os \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
@@ -57,7 +58,8 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-arm no-shared \
- no-tests no-apps no-ec2m no-weak-ssl-ciphers no-ocsp no-dtls no-dtls1 no-dtls1_2 no-ssl3 no-ssl2 no-comp no-engine no-async \
+ no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-deprecated no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
+ no-md4 no-mdc2 no-ml-dsa no-ml-kem no-multiblock no-nextprotoneg no-ocb no-ocsp no-quic no-rc2 no-rc4 no-rmd160 no-scrypt no-seed no-siphash no-siv no-sm2 no-sm3 no-sm4 no-srp no-srtp no-ts no-whirlpool \
  -fvisibility=hidden \
  -Os \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
@@ -87,7 +89,8 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-x86 no-shared \
- no-tests no-apps no-ec2m no-weak-ssl-ciphers no-ocsp no-dtls no-dtls1 no-dtls1_2 no-ssl3 no-ssl2 no-comp no-engine no-async \
+ no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-deprecated no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
+ no-md4 no-mdc2 no-ml-dsa no-ml-kem no-multiblock no-nextprotoneg no-ocb no-ocsp no-quic no-rc2 no-rc4 no-rmd160 no-scrypt no-seed no-siphash no-siv no-sm2 no-sm3 no-sm4 no-srp no-srtp no-ts no-whirlpool \
  -fvisibility=hidden \
  -Os \
  -D__ANDROID_API__=$MIN_SDK_VERSION \
@@ -117,7 +120,8 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 
 ./Configure -fpic android-x86_64 no-shared \
- no-tests no-apps no-ec2m no-weak-ssl-ciphers no-ocsp no-dtls no-dtls1 no-dtls1_2 no-ssl3 no-ssl2 no-comp no-engine no-async \
+ enable-ec_nistp_64_gcc_128 no-apps no-argon2 no-aria no-async no-bf no-blake2 no-camellia no-cast no-cmp no-cms no-comp no-deprecated no-des no-dgram no-dsa no-ec2m no-engine no-gost no-http no-idea no-legacy \
+ no-md4 no-mdc2 no-ml-dsa no-ml-kem no-multiblock no-nextprotoneg no-ocb no-ocsp no-quic no-rc2 no-rc4 no-rmd160 no-scrypt no-seed no-siphash no-siv no-sm2 no-sm3 no-sm4 no-srp no-srtp no-ts no-whirlpool \
  -fvisibility=hidden \
  -Os \
  -D__ANDROID_API__=$MIN_SDK_VERSION \

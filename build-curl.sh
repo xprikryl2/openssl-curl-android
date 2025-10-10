@@ -17,6 +17,7 @@ ARGUMENTS=" \
     --disable-debug \
     --disable-manual \
     --disable-verbose \
+    --disable-ntlm \
     --disable-ntlm-wb \
     --disable-cli
     "
